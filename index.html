@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson js</title>
+    <link rel="shortcut icon" href="4.png" />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="quiz-container">
+      <!--welcome screen-->
+      <section id="welcome-screen" class="quiz-section active">
+        <h1>Добро пожаловать в викторину!</h1>
+        <form id="player-form">
+          <div class="form-group">
+            <label for="player-name">Введите ваше имя</label>
+            <input type="text" id="player-name" name="player-name" required />
+          </div>
+          <button type="submit" class="btn">Начать игру</button>
+        </form>
+      </section>
+      <!--quiz questions screen-->
+      <section id="question-screen" class="quiz-section">
+        <div class="quiz-neader">
+          <div class="player-info">
+            <span>Игрок: <span id="current-player"> Михаил </span></span>
+          </div>
+          <div class="quiz-progress">
+            <span
+              >Вопрос: <span id="current-question"> 1 </span> из
+              <span id="total-questions"> 10</span></span
+            >
+          </div>
+
+          <div class="quiz-score">
+            <span>Счёт: <span id="current-score">0</span></span>
+          </div>
+        </div>
+        <div id="question-container">
+          <h2 id="question-text">Вопрос викторины</h2>
+          <div id="options-container">
+            <!---
+            <div class="option">
+              <input type="radio" name="quiz-option" id="id1" value="option1" />
+              <label for="id1">Ответ 1</label>
+            </div>
+
+           
+
+            <div class="option">
+              <input type="radio" name="quiz-option" id="id2" value="option2" />
+              <label for="id2">Ответ 2</label>
+            </div>
+
+            <div class="option">
+              <input type="radio" name="quiz-option" id="id3" value="option3" />
+              <label for="id3">Ответ 3</label>
+            </div>
+
+            <div class="option">
+              <input type="radio" name="quiz-option" id="id4" value="option4" />
+              <label for="id4">Ответ 4</label>
+            </div>
+          --></div>
+
+          <div id="feedback-container" class="hidden">
+            <p id="feedback-text">Ответ на вопрос</p>
+            <button id="next-button" class="btn">Следующий вопрос</button>
+          </div>
+        </div>
+      </section>
+      <!--Result screen-->
+      <section id="result-screen" class="quiz-section">
+        <h2>Результаты викторины</h2>
+        <div class="final-result">
+          <p>Поздравляем, <span id="result-player-name">Игрок 1</span>!</p>
+          <p>
+            Ваш результат:
+            <span id="result-score"
+              >0 <span>из </span><span id="result-total">10</span></span
+            >
+          </p>
+          <p id="result-precentage">50%</p>
+        </div>
+        <div id="result-actions">
+          <button id="restart-button" class="btn">Играть снова</button>
+        </div>
+      </section>
+    </div>
+
+    <template id="option-template">
+      <div class="option">
+        <input type="radio" name="quiz-option" id="" />
+        <label for=""></label>
+      </div>
+    </template>
+
+    <script src="quiz-data.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
